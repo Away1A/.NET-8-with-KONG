@@ -1,0 +1,15 @@
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\bin\Debug\net8.0\Garuda.Extension.deps.json
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\bin\Debug\net8.0\Garuda.Extension.dll
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\bin\Debug\net8.0\Garuda.Extension.pdb
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\bin\Debug\net8.0\Garuda.Utilities.dll
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\bin\Debug\net8.0\Garuda.Utilities.pdb
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\obj\Debug\net8.0\Garuda.Extension.csproj.AssemblyReference.cache
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\obj\Debug\net8.0\Garuda.Extension.GeneratedMSBuildEditorConfig.editorconfig
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\obj\Debug\net8.0\Garuda.Extension.AssemblyInfoInputs.cache
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\obj\Debug\net8.0\Garuda.Extension.AssemblyInfo.cs
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\obj\Debug\net8.0\Garuda.Extension.csproj.CoreCompileInputs.cache
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\obj\Debug\net8.0\Garuda.E.4440C9D4.Up2Date
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\obj\Debug\net8.0\Garuda.Extension.dll
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\obj\Debug\net8.0\refint\Garuda.Extension.dll
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\obj\Debug\net8.0\Garuda.Extension.pdb
+D:\GARUDA\net-8-template-main\src\Extension\Garuda.Extension\obj\Debug\net8.0\ref\Garuda.Extension.dll
