@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Garuda.Domain.Common</RootNamespace>
+        <Title>Common</Title>
+        <Description></Description>
+        <Copyright>CV. Garuda Infinity Kreasindo</Copyright>
+        <Version>0.0.1</Version>
+        <CodeAnalysisRuleSet>..\..\..\..\StyleCop.Ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Persistences\Garuda.Persistences.Framework\Garuda.Persistences.Framework.csproj" />
+      <ProjectReference Include="..\..\..\Utilities\Garuda.Utilities\Garuda.Utilities.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <AdditionalFiles Include="..\..\..\..\stylecop.json" Link="stylecop.json" />
+    </ItemGroup>
+
+</Project>
