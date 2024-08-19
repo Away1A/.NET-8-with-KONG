@@ -1,0 +1,57 @@
+// <copyright file="I{{Name}}Service.cs" company="CV Garuda Infinity Kreasindo">
+// Copyright (c) CV Garuda Infinity Kreasindo. All rights reserved.
+// </copyright>
+
+using Garuda.Application.{{Module}}.Dto;
+using Garuda.Application.{{Module}}.Dto.Request;
+using Garuda.Application.{{Module}}.Dto.Response;
+using Garuda.Utilities.Dtos;
+using Garuda.Utilities.Dtos.Response;
+using Sieve.Models;
+
+namespace Garuda.Application.{{Module}}.Services.V1.Contracts;
+
+/// <summary>
+///     {{Name}} Service Contracts.
+/// </summary>
+public interface I{{Name}}Service
+{
+    /// <summary>
+    ///     Get {{Name}} By Id.
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>A <see cref="{{Name}}Response"/> representing the asynchronous operation.</returns>
+    Task<{{Name}}Response> GetById(Guid id);
+
+    /// <summary>
+    ///     Get paged list of active {{name}}s.
+    /// </summary>
+    /// <param name="sieveModel"></param>
+    /// <returns>A <see>
+    ///         <cref>PaginatedResponses{{{Name}}Response}</cref>
+    ///     </see>
+    ///     representing the result of the asynchronous operation.</returns>
+    Task<PaginatedList<{{Name}}Response>> Get(SieveModel sieveModel);
+
+    /// <summary>
+    ///     Create new {{name}}.
+    /// </summary>
+    /// <param name="model"></param>
+    /// <returns>A <see cref="Task"/> representing the result of the operation.</returns>
+    Task Create(Post{{Name}}Request model);
+
+    /// <summary>
+    ///     Update {{name}} by id.
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="model"></param>
+    /// <returns>A <see cref="Task"/> representing the result of the operation.</returns>
+    Task Update(Guid id, Put{{Name}}Request model);
+
+    /// <summary>
+    ///     Delete {{name}} by Id.
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>A <see cref="Task"/> representing the result of the operation.</returns>
+    Task Delete(Guid id);
+}

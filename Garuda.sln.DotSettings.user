@@ -1,0 +1,22 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/ActualSeverity/@EntryValue">INFO</s:String>
+	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">/usr/local/share/dotnet/sdk/8.0.303/MSBuild.dll</s:String>
+	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/DotNetCliExePath/@EntryValue">/usr/local/share/dotnet/dotnet</s:String>
+	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1114112</s:Int64>
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/rezamuharam/Library/Caches/JetBrains/Rider2024.1/resharper-host/temp/Rider/vAny/CoverageData/_Garuda.2043765707/Snapshot/snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=0A27D5A1_002DDC07_002D4CB4_002D9C7D_002DC7B6AF7A3B5B/@EntryIndexedValue">87EF5673-CD8E-4055-8A2B-EBBD8C5FD109</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=7DD97534_002DD40C_002D4BFB_002D904C_002D546F0240C7F6/@EntryIndexedValue">89C8AC1C-16FF-48BE-AE41-1404A9F3C893</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=D4DA3FDC_002D9803_002D40D5_002DBEA8_002D33F5300BA923/@EntryIndexedValue">89C8AC1C-16FF-48BE-AE41-1404A9F3C893</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=xUnit/@EntryIndexedValue">33ff99d8-b1ad-4ed5-a4fd-376b97c2c841</s:String>
+	<s:Boolean x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/ShowAdvancedOptions/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=52022de0_002D4478_002D4d4f_002Da38c_002D3bf18f5c5ced/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Login_NullCredentials_ThrowsException" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;ProjectFile&gt;89C8AC1C-16FF-48BE-AE41-1404A9F3C893/d:Services/d:V1/f:AppConfigurationServiceTest.cs&lt;/ProjectFile&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;xUnit::89C8AC1C-16FF-48BE-AE41-1404A9F3C893::net8.0::Garuda.Application.Common.Test.Repositories.AppConfigurationRepositoryTest.TestGetWithKey&lt;/TestId&gt;
+      &lt;TestId&gt;xUnit::89C8AC1C-16FF-48BE-AE41-1404A9F3C893::net8.0::Garuda.Application.Common.Test.Repositories.AppConfigurationRepositoryTest.TestUpdate&lt;/TestId&gt;
+      &lt;TestId&gt;xUnit::89C8AC1C-16FF-48BE-AE41-1404A9F3C893::net8.0::Garuda.Application.Common.Test.Repositories.AppConfigurationRepositoryTest.Update_ReturnsAppConfiguration_WhenDataIsUpdated&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+    &lt;ProjectFile&gt;6CC58E73-4D4E-42EB-8F44-360E1DFF96E2/d:Repositories/f:AppConfigurationRepositoryTest.cs&lt;/ProjectFile&gt;
+  &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

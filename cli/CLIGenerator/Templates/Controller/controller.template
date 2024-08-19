@@ -1,0 +1,70 @@
+// <copyright file="{{Name}}Controller.cs" company="CV Garuda Infinity Kreasindo">
+// Copyright (c) CV Garuda Infinity Kreasindo. All rights reserved.
+// </copyright>
+
+using Asp.Versioning;
+using Garuda.Application.{{Module}}.Dto.Request;
+using Garuda.Application.{{Module}}.Dto.Response;
+using Garuda.Application.{{Module}}.Services.V1.Contracts;
+using Garuda.Utilities.Constants;
+using Garuda.Utilities.Dtos;
+using Garuda.Utilities.Exceptions;
+using Garuda.Utilities.Helpers;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Garuda.Presentation.{{Module}}.Controllers.V1;
+
+[ApiController]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/{{name}}")]
+[Produces("application/json")]
+[Tags("{{Name}}")]
+public class {{Name}}Controller : Controller
+{
+        private readonly I{{Name}}Service _{{name}}Service;
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="{{Name}}Controller" /> class.
+        /// </summary>
+        /// <param name="{{name}}Service"></param>
+        public {{Name}}Controller(I{{Name}}Service {{name}}Service)
+        {
+            _{{name}}Service = {{name}}Service;
+        }
+
+        [HttpGet]
+        [ProducesResponseType(HttpStatusCodes.SUCCESS, Type = typeof(List<{{Name}}Response>))]
+        [ProducesResponseType(HttpStatusCodes.UNAUTHORIZED, Type = typeof(MessageDto))]
+        public async Task<IActionResult> Get()
+        {
+            return Ok(await _{{name}}Service.GetAll());
+        }
+
+        [HttpPost]
+        [ProducesResponseType(HttpStatusCodes.NO_CONTENT)]
+        [ProducesResponseType(HttpStatusCodes.UNAUTHORIZED, Type = typeof(MessageDto))]
+        public async Task<IActionResult> Post([FromBody] {{Name}}PostRequest model)
+        {
+            return Created("Success", await _{{name}}Service.Create(model););
+        }
+
+        [HttpPut("{id}")]
+        [ProducesResponseType(HttpStatusCodes.NO_CONTENT)]
+        [ProducesResponseType(HttpStatusCodes.UNAUTHORIZED, Type = typeof(MessageDto))]
+        public async Task<IActionResult> Put([FromBody] {{Name}}PutRequest model)
+        {
+            await _{{name}}Service.Update(model);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        [ProducesResponseType(HttpStatusCodes.NO_CONTENT)]
+        [ProducesResponseType(HttpStatusCodes.UNAUTHORIZED, Type = typeof(MessageDto))]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _{{name}}Service.Delete(id);
+            return NoContent();
+        }
+}

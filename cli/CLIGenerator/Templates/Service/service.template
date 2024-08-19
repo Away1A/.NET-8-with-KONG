@@ -1,0 +1,87 @@
+// <copyright file="{{Name}}Service.cs" company="CV Garuda Infinity Kreasindo">
+// Copyright (c) CV Garuda Infinity Kreasindo. All rights reserved.
+// </copyright>
+
+using Garuda.Application.{{Module}}.Dto;
+using Garuda.Application.{{Module}}.Dto.Request;
+using Garuda.Application.{{Module}}.Dto.Response;
+using Garuda.Application.{{Module}}.Services.V1.Contracts;
+using Garuda.Domain.{{Module}}.Models;
+using Garuda.Persistences.Abstract.Contracts;
+using Garuda.Repository.{{Module}}.Repositories.Contracts;
+using Garuda.Utilities.Constants.Error;
+using Garuda.Utilities.Dtos;
+using Garuda.Utilities.Dtos.Response;
+using Mapster;
+using MapsterMapper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Sieve.Models;
+using Sieve.Services;
+
+#pragma warning disable CS8603 // Possible null reference return.
+
+namespace Garuda.Application.{{Module}}.Services.V1;
+
+public class {{Name}}Service : I{{Name}}Service
+{
+    private readonly ILogger _logger;
+    private readonly IMapper _mapper;
+    private readonly IStorage _storage;
+    private readonly ISieveProcessor _sieveProcessor;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="{{Name}}Service"/> class.
+    /// </summary>
+    /// <param name="storage"></param>
+    /// <param name="mapper"></param>
+    /// <param name="logger"></param>
+    /// <param name="sieveProcessor"></param>
+    public {{Name}}Service(IStorage storage, IMapper mapper, ILogger<{{Name}}Service> logger, ISieveProcessor sieveProcessor)
+    {
+        _storage = storage;
+        _mapper = mapper;
+        _sieveProcessor = sieveProcessor;
+        _logger = logger;
+    }
+
+    public async Task<{{Name}}Response> GetById(Guid id)
+    {
+        return await _storage.GetRepository<I{{Name}}Repository>()
+                             .Query()
+                             .ProjectToType<{{Name}}Response>()
+                             .FirstOrDefaultAsync(x => x.Id == id);
+    }
+
+    public async Task<PaginatedList<{{Name}}Response>> Get(SieveModel sieveModel)
+    {
+        var query = _storage.GetRepository<I{{Name}}Repository>().Query().ProjectToType<{{Name}}Response>();
+        return await PaginatedList<{{Name}}Response>.CreateAsync(_sieveProcessor.Apply(sieveModel,
+                                                              query,
+                                                              applyPagination: false),
+                                                             sieveModel.Page ?? 1,
+                                                             sieveModel.PageSize ?? 10);
+    }
+
+    public async Task<MessageDto> Create(Post{{Name}}Request model)
+    {
+         var {{name}} = _mapper.Map<{{Name}}>(model);
+         await _storage.GetRepository<I{{Name}}Repository>().Create({{name}});
+         await Handle{{Name}}Role({{name}}.Id, model.{{Name}}Roles);
+         await _storage.SaveAsync();
+    }
+
+    public async Task Update(Guid id, Put{{Name}}Request model)
+    {
+         var {{name}} = _mapper.Map<{{Name}}>(model);
+         await _storage.GetRepository<I{{Name}}Repository>().Update(id, {{name}});
+         await _storage.SaveAsync();
+    }
+
+    public async Task<MessageDto> Delete(Guid id)
+    {
+        await _storage.GetRepository<I{{Name}}Repository>().Delete(id);
+        await _storage.SaveAsync();
+    }
+}

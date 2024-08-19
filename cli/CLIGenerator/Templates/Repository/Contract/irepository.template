@@ -1,0 +1,49 @@
+// <copyright file="I{{Name}}Repository.cs" company="CV Garuda Infinity Kreasindo">
+// Copyright (c) CV Garuda Infinity Kreasindo. All rights reserved.
+// </copyright>
+
+using Garuda.Domain.{{Module}}.Models;
+using Garuda.Persistences.Abstract.Contracts;
+
+namespace Garuda.Repository.{{Module}}.Repositories.Contracts;
+
+/// <summary>
+/// Represents a repository for managing {{name}} data.
+/// </summary>
+public interface I{{Name}}Repository : IRepository
+{
+    /// <summary>
+    /// Retrieves a queryable representation of the {{Name}} entities.
+    /// </summary>
+    /// <returns>A <see cref="IQueryable{{{Name}}}"/> representing the queryable {{Name}} entities.</returns>
+    IQueryable<{{Name}}> Query();
+
+    /// <summary>
+    /// Retrieves a {{name}} by its unique id.
+    /// </summary>
+    /// <param name="id">The unique id of the {{name}}.</param>
+    /// <returns>The {{name}} associated with the specified id.</returns>
+    Task<{{Name}}> Get(Guid id);
+
+    /// <summary>
+    /// Creates a new {{name}}.
+    /// </summary>
+    /// <param name="model">The {{name}} model to be created.</param>
+    /// <returns>A <see cref="Task"/> representing the result of the operation.</returns>
+    Task<{{Name}}> Create({{Name}} model);
+
+    /// <summary>
+    /// Updates a {{name}} with the specified id using the provided model.
+    /// </summary>
+    /// <param name="id">The id of the {{name}} to update.</param>
+    /// <param name="model">The updated {{name}} model.</param>
+    /// <returns>A <see cref="Task"/> representing the result of the operation.</returns>
+    Task<{{Name}}> Update(Guid id, {{Name}} model);
+
+    /// <summary>
+    /// Updates the status of a {{name}} with the specified id.
+    /// </summary>
+    /// <param name="id">The unique id of the {{name}}.</param>
+    /// <returns>A <see cref="Task"/> representing the result of the operation.</returns>
+    Task<{{Name}}> Delete(Guid id);
+}
